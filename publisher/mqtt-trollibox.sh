@@ -16,7 +16,7 @@ check_event() {
                 | mqtt-simple -r -h mqtt.bitlair.nl -p "bitlair/music/$PLAYER_NAME/state"
             ;;
         "volume")
-            curl -s "$DATA_URL/volume" | jq .volume \
+            curl -s "$DATA_URL/volume" | jq '.volume * 100' \
                 | mqtt-simple -r -h mqtt.bitlair.nl -p "bitlair/music/$PLAYER_NAME/volume"
             ;;
         *)
