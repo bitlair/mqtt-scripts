@@ -1,0 +1,14 @@
+[Unit]
+Description=Trollibox to MQTT
+After=network.target
+
+[Service]
+Type=simple
+Restart=on-failure
+RestartSec=2s
+ExecStart=/bin/bash /opt/mqtt/mqtt-trollibox.sh
+User=nobody
+Group=nogroup
+
+[Install]
+WantedBy=multi-user.target
