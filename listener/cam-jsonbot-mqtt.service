@@ -1,0 +1,14 @@
+[Unit]
+Description=Camera to Jsonbot via MQTT
+After=network.target
+
+[Service]
+Type=simple
+Restart=on-failure
+RestartSec=2s
+ExecStart=/bin/bash /opt/mqtt/cam-jsonbot.sh
+User=bitlair
+Group=bitlair
+
+[Install]
+WantedBy=multi-user.target

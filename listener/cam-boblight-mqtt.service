@@ -1,0 +1,14 @@
+[Unit]
+Description=Camera to Boblight via MQTT
+After=network.target
+
+[Service]
+Type=simple
+Restart=on-failure
+RestartSec=2s
+ExecStart=/bin/bash /opt/mqtt/cam-boblight.sh
+User=nobody
+Group=nogroup
+
+[Install]
+WantedBy=multi-user.target
