@@ -2,6 +2,9 @@
 
 CAM_NAME="space"
 
+set -eu
+set -o pipefail
+
 boblight_pid=""
 mqtt-simple --message-only -h mqtt.bitlair.nl -s "bitlair/cam/$CAM_NAME" |
     while read num; do

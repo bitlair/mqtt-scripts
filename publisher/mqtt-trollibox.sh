@@ -2,6 +2,9 @@
 
 PLAYER_NAME="space"
 
+set -eu
+set -o pipefail
+
 DATA_URL="https://music.bitlair.nl/trollibox/data/player/$PLAYER_NAME"
 
 check_event() {

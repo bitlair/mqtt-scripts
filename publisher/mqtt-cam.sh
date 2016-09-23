@@ -4,6 +4,9 @@
 
 CAM_NAME="space"
 
+set -eu
+set -o pipefail
+
 prev_watchers=""
 while true; do
     watchers=`curl -s "http://172.31.0.5/server-status" | sed -n 's/^.\+now\.mjpg?user=\(.\+\) HTTP.\+$/\1/p' | sort -u`

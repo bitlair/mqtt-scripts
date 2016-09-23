@@ -2,6 +2,9 @@
 
 CAM_NAME="space"
 
+set -eu
+set -o pipefail
+
 mqtt-simple --message-only -h mqtt.bitlair.nl -s "bitlair/cam/$CAM_NAME/viewers" |
     while read watchers; do
         if [ "$watchers" != "" ]; then

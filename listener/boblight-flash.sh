@@ -1,5 +1,8 @@
 #!/bin/bash
 
+set -eu
+set -o pipefail
+
 while true; do
     # Clear retained messages if any.
     mqtt-simple -r -h mqtt.bitlair.nl -p "bitlair/flash" -m ''
