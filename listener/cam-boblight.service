@@ -6,7 +6,7 @@ After=network.target
 Type=simple
 Restart=on-failure
 RestartSec=2s
-ExecStart=/bin/bash /opt/mqtt/cam-boblight.sh
+ExecStart=/bin/bash /opt/mqtt/listener/cam-boblight.sh
 User=nobody
 Group=nogroup
 

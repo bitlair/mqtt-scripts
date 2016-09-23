@@ -6,7 +6,7 @@ After=network.target
 Type=simple
 Restart=on-failure
 RestartSec=2s
-ExecStart=/bin/bash /opt/mqtt/mqtt-trollibox.sh %I
+ExecStart=/bin/bash /opt/mqtt/publisher/mqtt-trollibox.sh %I
 User=nobody
 Group=nogroup
 

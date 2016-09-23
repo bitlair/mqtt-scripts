@@ -6,7 +6,7 @@ After=network.target
 Type=simple
 Restart=on-failure
 RestartSec=2s
-ExecStart=/bin/bash /opt/mqtt/boblight-flash.sh
+ExecStart=/bin/bash /opt/mqtt/listener/boblight-flash.sh
 User=nobody
 Group=nogroup
 

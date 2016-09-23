@@ -6,7 +6,7 @@ After=network.target
 Type=simple
 Restart=on-failure
 RestartSec=2s
-ExecStart=/bin/bash /opt/mqtt/cam-jsonbot.sh
+ExecStart=/bin/bash /opt/mqtt/listener/cam-jsonbot.sh
 User=bitlair
 Group=bitlair
 
