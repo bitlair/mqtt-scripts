@@ -1,6 +1,11 @@
 #!/bin/bash
 
-PLAYER_NAME="space"
+PLAYER_NAME="$1"
+
+if [ "$PLAYER_NAME" == "" ]; then
+    echo "Usage: $0 <player name>"
+    exit
+fi
 
 set -eu
 set -o pipefail
