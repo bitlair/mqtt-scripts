@@ -6,7 +6,7 @@ After=network.target
 Type=simple
 Restart=on-failure
 RestartSec=2s
-ExecStart=/bin/bash /opt/mqtt/mqtt-cam.sh
+ExecStart=/bin/bash /opt/mqtt/mqtt-camera.sh
 User=nobody
 Group=nogroup
 
