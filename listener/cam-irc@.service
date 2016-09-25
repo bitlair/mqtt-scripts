@@ -1,14 +1,14 @@
 [Unit]
-Description=Camera to Jsonbot via MQTT
+Description=Camera %I to IRC via MQTT
 After=network.target
 
 [Service]
 Type=simple
 Restart=on-failure
 RestartSec=2s
-ExecStart=/bin/bash /opt/mqtt/listener/cam-jsonbot.sh
-User=bitlair
-Group=bitlair
+ExecStart=/bin/bash /opt/mqtt/listener/cam-irc.sh %I
+User=nobody
+Group=nogroup
 
 [Install]
 WantedBy=multi-user.target
