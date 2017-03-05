@@ -21,6 +21,8 @@ mqtt-simple -h mqtt.bitlair.nl -s "bitlair/wifi/+" |
             on="on"
             if [ "$signal" != "" ]; then
                 sigstr="(signal: $signal dB SNR)"
+            else
+                sigstr=""
             fi
         elif [ "$action" == "part" ]; then
             on="from"
@@ -29,5 +31,5 @@ mqtt-simple -h mqtt.bitlair.nl -s "bitlair/wifi/+" |
             continue
         fi
 
-        irc-say "$displayname ${action}s with their $device $on $ssid $sigstr"
+        irc-say "$displayname's $device ${action}s $on $ssid"
     done
