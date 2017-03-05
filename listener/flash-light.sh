@@ -4,8 +4,6 @@ set -eu
 set -o pipefail
 
 while true; do
-    # Clear retained messages if any.
-    mqtt-simple -r -h mqtt.bitlair.nl -p "bitlair/flash" -m ''
     sleep 1
     mqtt-simple --one -h mqtt.bitlair.nl -s "bitlair/flash" > /dev/null
     for i in {0..2}; do
