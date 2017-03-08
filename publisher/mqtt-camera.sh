@@ -9,7 +9,7 @@ set -o pipefail
 
 prev_watchers=""
 while true; do
-    watchers=`curl -s "http://172.31.0.5/server-status" | sed -n 's/^.\+now\.mjpg?user=\(.\+\) HTTP.\+$/\1/p' | sort -u`
+    watchers=`curl -s "https://portal.bitlair.nl/server-status" | sed -n 's/^.\+now\.mjpg?user=\(.\+\) HTTP.\+$/\1/p' | sort -u`
     if [ "$watchers" == "$prev_watchers" ]; then
         continue
     fi
